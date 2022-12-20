@@ -1,5 +1,6 @@
 ﻿//using OOPSDemo236Batch.Abstraction;
 using OOPSDemo236Batch.Abstraction;
+using OOPSDemo236Batch.Encapsulation;
 using OOPSDemo236Batch.Inhertance;
 using OOPSDemo236Batch.Polymorphism;
 using System;
@@ -12,7 +13,7 @@ namespace OOPSDemo236Batch
         public static void Main(string[] args)
         {
             Console.WriteLine("\t\tPlease Choose a option below List\n");
-            Console.WriteLine("1. Inheritance \n2. Polymorphism \n3. Abstraction\n");
+            Console.WriteLine("1. Inheritance \n2. Polymorphism \n3. Abstraction \n4. Encapsulation\n");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -46,6 +47,14 @@ namespace OOPSDemo236Batch
                     Pig pig = new Pig();
                     pig.AnimalSound();
                     pig.Sleep();
+                    break;
+
+                case 4:
+                    Console.WriteLine("\tEncapsulation Concept");
+                    Account account = new Account();
+                    Console.WriteLine("before:\n" + account.Name);
+                    account.Name = "abcd";
+                    Console.WriteLine("after:\t" + account.Name);
                     break;
 
                 default:
