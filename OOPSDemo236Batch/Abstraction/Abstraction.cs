@@ -8,7 +8,7 @@ namespace OOPSDemo236Batch.Abstraction
 {
     abstract class Animal
     {
-        public abstract void AnimalSound();
+        public abstract void AnimalSound();  //abstract method
 
         public void Sleep()
         {
