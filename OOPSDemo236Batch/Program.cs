@@ -1,5 +1,9 @@
-﻿using OOPSDemo236Batch.Inhertance;
+﻿//using OOPSDemo236Batch.Abstraction;
+using OOPSDemo236Batch.Abstraction;
+using OOPSDemo236Batch.Inhertance;
 using OOPSDemo236Batch.Polymorphism;
+using System;
+using System.Net.NetworkInformation;
 
 namespace OOPSDemo236Batch
 {
@@ -8,7 +12,7 @@ namespace OOPSDemo236Batch
         public static void Main(string[] args)
         {
             Console.WriteLine("\t\tPlease Choose a option below List\n");
-            Console.WriteLine("1. Inheritance \n2. Polymorphism\n");
+            Console.WriteLine("1. Inheritance \n2. Polymorphism \n3. Abstraction\n");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -20,6 +24,7 @@ namespace OOPSDemo236Batch
                     Console.WriteLine("\t\tAccessed Details() method from Derived class");
                     cars.Details();   //calling method from derived 
                     break;
+
                 case 2:
                     Console.WriteLine("\t\tMethod Overloading\n");
                     MethodOverloading method = new MethodOverloading();
@@ -35,7 +40,14 @@ namespace OOPSDemo236Batch
                     Cat cat = new Cat();
                     cat.Run();
                     break;
-                    
+
+                case 3:
+                    Console.WriteLine("\tAbstraction Concept");
+                    Pig pig = new Pig();
+                    pig.AnimalSound();
+                    pig.Sleep();
+                    break;
+
                 default:
                     Console.WriteLine("Please enter Valid Option");
                     break;
